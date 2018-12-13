@@ -129,7 +129,7 @@ def install_ruby_dependencies(rubie)
   when /^ruby-/, /^ree-/, /^rbx-/, /^kiji/
     case node['platform']
       when "debian","ubuntu"
-        pkgs  = %w{ build-essential openssl libreadline7 libreadline7-dev
+        pkgs  = %w{ build-essential openssl libreadline libreadline-dev
                     zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev
                     sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev
                     ncurses-dev automake libtool bison ssl-cert pkg-config libgdbm-dev libffi-dev}
