@@ -57,9 +57,9 @@ default['rvm']['group_users']   = []
 default['rvm']['gpg_key']       = 'D39DC0E3'
 
 case platform
-when "redhat","centos","fedora","scientific","amazon"
+when "redhat","centos","fedora","scientific","amazon", "ubuntu"
   node.set['rvm']['install_pkgs']   = %w{sed grep tar gzip bzip2 bash curl git}
-when "debian","ubuntu","suse"
+when "debian","suse"
   node.set['rvm']['install_pkgs']   = %w{sed grep tar gzip bzip2 bash curl git-core}
 when "gentoo"
   node.set['rvm']['install_pkgs']   = %w{git}
